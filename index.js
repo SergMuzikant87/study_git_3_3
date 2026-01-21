@@ -38,9 +38,9 @@ function inductotance_react_resist_table_build()
     const f_start = Number(document.getElementById("frequency_start_value_range").value);
     const f_count = Number(document.getElementById("frequency_values_count").value);
     const f_step = Number(document.getElementById("frequency_step_value_range").value);
-    const L_start = Number(document.getElementById("inductance_start_value_range").value);
+    const L_uH_start = Number(document.getElementById("inductance_start_value_range").value);
     const L_count = Number(document.getElementById("inductance_values_count").value);
-    const L_step = Number(document.getElementById("inductance_step_value_range").value);
+    const L_uH_step = Number(document.getElementById("inductance_step_value_range").value);
 
     HTML = `
         <tr> 
@@ -52,12 +52,12 @@ function inductotance_react_resist_table_build()
     for (let f_number = 0, f = f_start;  f_number < f_count; f_number++, f += f_step)
     {    
         const color_property_text = (f_number & 1) ? `bgcolor= #EBDFCE` : `bgcolor="#EEEEDD"`;
-        for(let L_number = 0, L = L_start; L_number < L_count; L_number++, L += L_step)
+        for(let L_number = 0, L_uH = L_uH_start; L_number < L_count; L_number++, L_uH += L_uH_step)
         {
-
+            const L = L_uH / 1000000;
             XL = (2 * Pi * f * L).toFixed(2);
             HTML += `<tr ${color_property_text}> 
-                        <td> ${f} </td> <td> ${L} </td> <td> ${XL} </td> 
+                        <td> ${f} </td> <td> ${L_uH} </td> <td> ${XL} </td> 
                     </tr>`;
         }
     }
