@@ -14,16 +14,16 @@
             <label>Frequency start value (Hz)</label> <br>
             <input type="range" id="frequency_start_value_range" min="100" max="100000" value="100" step="10"/> <br> <br>
             
-            <label>Frequency values count (uH)</label> <br>
+            <label>Frequency values count </label> <br>
             <input type="range" id="frequency_values_count" min="1" max="35" value="5" step="1"/> <br> <br>
 
-            <label>Frequency step value (uH)</label> <br>
+            <label>Frequency step value (Hz)</label> <br>
             <input type="range" id="frequency_step_value_range" min="1000" max="100000" value="100" step="100"/> <br> <br>
 
             <label>Inductance start value (uH)</label> <br>
             <input type="range" id="inductance_start_value_range" min="10" max="1000" value="50" step="10"/> <br> <br>
             
-            <label>Inductance values count (uH)</label> <br>
+            <label>Inductance values count </label> <br>
             <input type="range" id="inductance_values_count" min="1" max="35" value="5" step="1"/> <br> <br>
 
             <label>Inductance step value (uH)</label> <br>
