@@ -54,7 +54,7 @@ function inductotance_react_resist_table_build()
         const color_property_text = (f_number & 1) ? `bgcolor= #EBDFCE` : `bgcolor="#EEEEDD"`;
         for(let L_number = 0, L_uH = L_uH_start; L_number < L_count; L_number++, L_uH += L_uH_step)
         {
-            const L = L_uH / 1000000;
+            const L = L_uH / 1000000.0;
             XL = (2 * Pi * f * L).toFixed(2);
             HTML += `<tr ${color_property_text}> 
                         <td> ${f} </td> <td> ${L_uH} </td> <td> ${XL} </td> 
